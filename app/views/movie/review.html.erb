@@ -1,0 +1,14 @@
+
+
+<table class="table table-striped"> 
+    
+    <% @reviews.each do |review|%>
+    <tr class="table-secondary">
+        <th><b><%= review.name %><b></th>
+        <th><button type="button" class="btn btn-success"><a href="re/<%=review.name%>">Review</a></button></th>
+    </tr>
+    <%end%>
+</table>
+
+
+

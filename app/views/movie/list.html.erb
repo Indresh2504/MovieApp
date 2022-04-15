@@ -1,0 +1,31 @@
+
+
+<table class="table table-striped">
+    <tr class="table-primary">
+        <th >ID</th>
+        <th>NAME</th>
+        <th>YEAR</th>
+        <th>DIRECTOR</th>
+        <th>DESCRIPTION</th>
+        <th>RATING</th>
+        <th>REVIEWS</th>
+        <th>ACTION</th>
+    </tr>
+    <% @movielist.each do |list|%>
+    
+    <tr>
+        <td ><%= list.id %></td>
+        <td><%= list.name %></td>
+        <td><%= list.year %></td>
+        <td><%= list.director %></td>
+        <td><%= list.description %></td>
+       
+        
+        <td><%= list.ratingto(list) %></td>
+        <td><%= list.reviews%></td>
+        <td><button type="button" class="btn btn-success" ><a href="update/<%=list.id%>" >Edit</a></button>
+            <button type="button" class="btn btn-dark"><a href="delete/<%=list.id%>">Delete</td></button>
+       
+    </tr>
+    <% end %>
+</table>

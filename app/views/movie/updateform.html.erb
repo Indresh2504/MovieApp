@@ -1,0 +1,24 @@
+
+
+<hr>
+<div class="mb-3" style='width:50%'>
+<form action="/modify/<%=@list.id%>" method="post">
+<input type="hidden" name="authenticity_token" name="mname" value="<%=form_authenticity_token%>">
+  <label  class="form-label">Name:</label>
+  <input type="text" class="form-control" name="mname" value="<%= @list.name%>"><br>
+  <label  class="form-label">Year:</label>
+  <input type="text" class="form-control" name="myear" value="<%= @list.year%>"><br>
+  <label class="form-label">Director:</label>
+  <input type="text" name="mdirector" class="form-control" value="<%= @list.director%>" ><br>
+  <label class="form-label">Description:</label>
+  <input type="text-area" name="mdesc"  class="form-control" value="<%= @list.description%>" ><br>
+  <label class="form-label">Rating:</label>
+  <input type="text" name="mrating"  class="form-control" value="<%= @list.rating%>">
+  <label class="form-label">Reviews:</label>
+  <input type="text" name="mreviews"  class="form-control" value="<%= @list.reviews%>">
+   <div class="sub">
+  <input type="submit" id="su" value="Update">
+  <input type="reset" id="res" value="clear">
+  </div>
+</form>
+</div>
